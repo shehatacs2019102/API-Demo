@@ -1,0 +1,37 @@
+.WeatherContainer {
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 350px;
+  margin: 20px auto;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease; /* Smooth transition when time changes */
+  color: white;
+}
+
+/* Day Theme: Bright and Sunny */
+.WeatherContainer.day {
+  background: linear-gradient(180deg, #4facfe 0%, #00f2fe 100%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Night Theme: Dark and Cozy */
+.WeatherContainer.night {
+  background: linear-gradient(180deg, #2c3e50 0%, #000000 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.temp-display {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: 10px 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.weatherpicture {
+  width: 120px;
+  height: 120px;
+  margin-top: 15px;
+  /* Add a glow effect to the sun/moon */
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+}

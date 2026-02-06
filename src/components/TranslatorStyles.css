@@ -1,0 +1,96 @@
+/* Container Layout - Mirrored from .dogcontainer */
+.translator-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 1.5rem;
+  background-color: #f8f9fa; /* Exact match to Dog CSS */
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 500px; /* Exact match to Dog CSS */
+  margin: 2rem auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Textarea Styling - Fixing the "White on White" problem */
+.translator-input {
+  width: 100%;
+  min-height: 120px;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 2px solid #e0e0e0; 
+  background-color: #ffffff; /* White background */
+  
+  /* --- THE FIX --- */
+  color: #333333; /* Dark grey text color */
+  caret-color: #1a73e8; /* Makes the blinking cursor blue */
+  /* ---------------- */
+
+  font-size: 1rem;
+  font-family: inherit;
+  resize: none;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+/* Focused State - Ensuring visibility when selected */
+.translator-input:focus {
+  outline: none;
+  border-color: #1a73e8; 
+  background-color: #ffffff; /* Keep it white or slightly off-white */
+  color: #000000; /* Force black text on focus */
+  box-shadow: 0 0 8px rgba(26, 115, 232, 0.2);
+}
+
+/* Placeholder Styling - Make sure the "Type English here..." is visible too */
+.translator-input::placeholder {
+  color: #888888;
+  opacity: 1;
+}
+
+/* Button Styling - Mirrored from .dogbutton colors/shape */
+.translate-btn {
+  background-color: #ff6b6b; /* Matching Dog Button color */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px; /* Matching Dog Button roundness */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: auto; /* Keeps it looking like the dog button */
+}
+
+.translate-btn:hover {
+  background-color: #ee5253;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+  transform: translateY(-2px);
+}
+
+.translate-btn:active {
+  transform: translateY(0);
+}
+
+/* Result Area styling to match the card vibe */
+.result-box {
+  width: 100%;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.result-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #888;
+  margin-bottom: 5px;
+}

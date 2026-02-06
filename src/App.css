@@ -1,0 +1,78 @@
+/* Overall Page Background */
+body {
+  margin: 0;
+  background-color: #f0f2f5; /* Light grey background to make cards pop */
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Header Styling */
+h1 {
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+/* The Magic Layout: Responsive Grid */
+.app-container {
+  display: grid;
+  /* This tells CSS to try and fit 3 columns of equal size (1fr) */
+  /* If you have more than 3 cards, they will automatically wrap to the next row */
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 2rem;
+  align-items: start;
+  justify-items: center;
+  width: 100%;
+}
+
+/* Let's make it responsive so it doesn't break on small phones */
+@media (max-width: 900px) {
+  .app-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .app-container {
+    grid-template-columns: 1fr; /* 1 column for phones */
+  }
+}
+
+/* Logo and Animation tweaks */
+.logo {
+  height: 4em;
+  padding: 1em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+@keyframes logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo.react {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Individual Card Wrapper (Optional) */
+/* You can wrap each component in a 'card' class for extra spacing */
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 1rem;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
