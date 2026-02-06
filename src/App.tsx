@@ -24,7 +24,7 @@ function App() {
       </div>
 
       <p className="read-the-docs">
-        Click on the buttons to refresh your day!
+        End Of Page
       </p>
     </div>
   )
